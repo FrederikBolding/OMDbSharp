@@ -34,10 +34,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Movie.cs" />
-    <Compile Include="MovieList.cs" />
-    <Compile Include="OMDb.cs" />
+    <Compile Include="Episode.cs" />
+    <Compile Include="Item.cs" />
+    <Compile Include="ItemList.cs" />
+    <Compile Include="OMDbClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Season.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json">
