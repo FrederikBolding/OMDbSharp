@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>Frederik Bolding</authors>
+    <owners>Frederik Bolding</owners>
+    <projectUrl>https://github.com/FrederikBolding/OMDbSharp</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>An API wrapper for www.omdbapi.com</description>
+    <releaseNotes>Fixed deadlock issues</releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags>OMDb movies shows IMDB api</tags>
+  </metadata>
+</package>
