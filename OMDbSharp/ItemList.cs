@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace OmdbSharp
+namespace OMDbSharp
 {
     public class ItemList
     {

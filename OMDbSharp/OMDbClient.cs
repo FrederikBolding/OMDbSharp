@@ -4,7 +4,7 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OmdbSharp
+namespace OMDbSharp
 {
     public class OMDbClient
     {

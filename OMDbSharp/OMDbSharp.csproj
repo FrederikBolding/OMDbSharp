@@ -8,8 +8,8 @@
     <ProjectGuid>{F2394CCF-C2B9-4E86-8C3F-CD4F81252619}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>omdbSharp</RootNamespace>
-    <AssemblyName>omdbSharp</AssemblyName>
+    <RootNamespace>OMDbSharp</RootNamespace>
+    <AssemblyName>OMDbSharp</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
