@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace OMDbSharp
+﻿namespace OMDbSharp
 {
     public class Item
     {
