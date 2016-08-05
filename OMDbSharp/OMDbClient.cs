@@ -1,18 +1,14 @@
 ﻿using System;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace OMDbSharp
 {
     public class OMDbClient
     {
-        private const string omdbUrl = "http://www.omdbapi.com/?"; // Base omdb api URL
+        private const string omdbUrl = "http://www.omdbapi.com/?"; // Base OMDb API URL
         private bool rottenTomatoesRatings = false;
-        /**public string omdbKey; // A key is required for poster images.
-        public Movie newMovie; // Initialize movie object
-        public MovieList newMovieList; // Initialize movie list object**/
 
         public OMDbClient(bool rottenTomatoesRatings)
         {
