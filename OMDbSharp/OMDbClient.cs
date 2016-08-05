@@ -60,9 +60,21 @@ namespace OMDbSharp
             return _season;
         }
 
+        public async Task<SeasonDetails> GetSeriesSeasonDetails(string id, int season)
+        {
+            SeasonDetails _season = await Request<SeasonDetails>("i=" + id + "&Season=" + season + "&detail=full").ConfigureAwait(false);
+            return _season;
+        }
+
         public async Task<Episode> GetSeriesEpisode(string id, int season, int episode)
         {
             Episode _episode = await Request<Episode>("i=" + id + "&Season=" + season + "&Episode=" + episode).ConfigureAwait(false);
+            return _episode;
+        }
+
+        public async Task<EpisodeDetails> GetSeriesEpisodeDetails(string id, int season, int episode)
+        {
+            EpisodeDetails _episode = await Request<EpisodeDetails>("i=" + id + "&Season=" + season + "&Episode=" + episode + "&detail=full").ConfigureAwait(false);
             return _episode;
         }
     }
