@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
+using System;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
@@ -26,14 +28,23 @@ namespace OMDbSharp
                 HttpResponseMessage response = await client.GetAsync(omdbUrl + query + "&tomatoes=" + rottenTomatoesRatings).ConfigureAwait(false);
                 if (response.IsSuccessStatusCode)
                 {
-                    T obj = await response.Content.ReadAsAsync<T>().ConfigureAwait(false);
-                    return obj;
+                    string json = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+                    return (T)JsonConvert.DeserializeObject<T>(json, new JsonSerializerSettings()
+                    {
+                        Error = HandleDeserializationError
+                    });
                 }
                 else
                 {
                     return default(T);
                 }
             }
+        }
+
+        public void HandleDeserializationError(object sender, ErrorEventArgs errorArgs)
+        {
+            var currentError = errorArgs.ErrorContext.Error.Message;
+            errorArgs.ErrorContext.Handled = true;
         }
 
         public async Task<Item> GetItemByTitle(string title)
