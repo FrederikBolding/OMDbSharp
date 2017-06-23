@@ -10,10 +10,12 @@ namespace OMDbSharp
     public class OMDbClient
     {
         private const string omdbUrl = "http://www.omdbapi.com/?"; // Base OMDb API URL
+        private string apiKey;
         private bool rottenTomatoesRatings = false;
 
-        public OMDbClient(bool rottenTomatoesRatings)
+        public OMDbClient(string apiKey, bool rottenTomatoesRatings)
         {
+            this.apiKey = apiKey;
             this.rottenTomatoesRatings = rottenTomatoesRatings;
         }
 
@@ -25,7 +27,7 @@ namespace OMDbSharp
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-                HttpResponseMessage response = await client.GetAsync(omdbUrl + query + "&tomatoes=" + rottenTomatoesRatings).ConfigureAwait(false);
+                HttpResponseMessage response = await client.GetAsync(omdbUrl + "apikey=" + apiKey + "&" + query + "&tomatoes=" + rottenTomatoesRatings).ConfigureAwait(false);
                 if (response.IsSuccessStatusCode)
                 {
                     string json = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
