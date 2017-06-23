@@ -9,8 +9,8 @@
     <projectUrl>https://github.com/FrederikBolding/OMDbSharp</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>An API wrapper for www.omdbapi.com</description>
-    <releaseNotes>Added series season and episode details</releaseNotes>
-    <copyright>Copyright 2016</copyright>
+    <releaseNotes>Added API key support</releaseNotes>
+    <copyright>Copyright 2017</copyright>
     <tags>OMDb movies shows IMDB api</tags>
   </metadata>
 </package>
