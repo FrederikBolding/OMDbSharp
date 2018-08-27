@@ -1,4 +1,4 @@
-﻿namespace OMDbSharp
+﻿namespace OMDbSharp.Classes
 {
     public class EpisodeDetails
     {
@@ -18,8 +18,8 @@
         public string Awards { get; set; }
         public string Poster { get; set; }
         public string Metascore { get; set; }
-        public string imdbRating { get; set; }
-        public string imdbVotes { get; set; }
-        public string imdbID { get; set; }
+        public string IMDbRating { get; set; }
+        public string IMDbVotes { get; set; }
+        public string IMDbID { get; set; }
     }
 }
