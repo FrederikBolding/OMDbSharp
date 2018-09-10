@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
-using OMDbSharp.Classes;
+using OMDbSharp.Objects;
 using System;
 using System.Net.Http;
 using System.Net.Http.Headers;

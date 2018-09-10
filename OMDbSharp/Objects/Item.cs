@@ -1,4 +1,4 @@
-﻿namespace OMDbSharp.Classes
+﻿namespace OMDbSharp.Objects
 {
     public class Item
     {

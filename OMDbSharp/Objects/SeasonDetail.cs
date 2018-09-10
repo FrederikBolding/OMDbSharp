@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace OMDbSharp.Classes
+namespace OMDbSharp.Objects
 {
     public class SeasonDetails
     {
