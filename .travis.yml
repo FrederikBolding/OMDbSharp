@@ -1,0 +1,12 @@
+language: csharp
+solution: OMDbSharp.sln
+install:
+  - nuget restore OMDbSharp.sln
+script:
+  - xbuild OMDbSharp.sln /p:Configuration=Release
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: chmod +x ./deploy/deploy.sh && ./deploy/deploy.sh $NUGET_API_KEY $NUGET_SOURCE
+  on:
+    branch: release
