@@ -9,8 +9,8 @@
     <projectUrl>https://github.com/FrederikBolding/OMDbSharp</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>An API wrapper for www.omdbapi.com</description>
-    <releaseNotes>Added API key support</releaseNotes>
-    <copyright>Copyright 2017</copyright>
+    <releaseNotes>Rebuilt in NET Core</releaseNotes>
+    <copyright>Copyright 2018</copyright>
     <tags>OMDb movies shows IMDB api</tags>
   </metadata>
 </package>
