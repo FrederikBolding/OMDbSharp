@@ -1,12 +1,12 @@
 language: csharp
 solution: OMDbSharp.sln
-install:
-  - nuget restore OMDbSharp.sln
+mono: none
+dotnet: 1.1.5
 script:
-  - xbuild OMDbSharp.sln /p:Configuration=Release
+ - dotnet pack
 deploy:
   skip_cleanup: true
   provider: script
-  script: chmod +x ./deploy.sh && ./deploy.sh $NUGET_API_KEY $NUGET_SOURCE
+  script: dotnet nuget push ./bin/Release/OMDbSharp.*.nupkg -k $NUGET_API_KEY -s $NUGET_SOURCE
   on:
     branch: release
