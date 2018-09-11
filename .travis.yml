@@ -3,7 +3,7 @@ solution: OMDbSharp.sln
 mono: none
 dotnet: 2.0.0
 script:
- - dotnet pack
+ - dotnet pack -c Release
 deploy:
   skip_cleanup: true
   provider: script
